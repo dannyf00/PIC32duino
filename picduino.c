@@ -140,7 +140,7 @@ uint32_t micros(void) {
 		f = TMR1;
 	} while (m != timer_ticks);
 	//now m and f are consistent
-	return (m | f) / clockCyclesPerMicrosecond() / 1;
+	return (m | f) / clockCyclesPerMicrosecond();
 }
 	
 //return milliseconds
@@ -160,16 +160,16 @@ uint32_t millis(void) {
 
 //delay millisseconds
 void delay(uint32_t ms) {
-	uint32_t start_time = millis();
-
-	while (millis() - start_time < ms) continue;
+	uint32_t start_time = ticks();
+	ms *= cyclesPerMillisecond();
+	while (ticks() - start_time < ms) continue;
 }
 
 //delay micros seconds
 void delayMicroseconds(uint32_t us) {
-	uint32_t start_time = micros();
-	
-	while (micros() - start_time < us) continue;
+	uint32_t start_time = ticks();
+	us *= cyclesPerMicrosecond();
+	while (ticks() - start_time < us) continue;
 }
 //end Time
 

@@ -228,6 +228,8 @@ uint32_t millis(void);
 uint32_t micros(void);
 void delay(uint32_t ms);
 void delayMicroseconds(uint32_t us);
+#define cyclesPerMicrosecond()			(F_CPU / 1000000ul)
+#define cyclesPerMillisecond()			(F_CPU / 1000)
 
 //advanced IO
 //void tone(void);									//tone frequency specified by F_TONE in STM8Sduino.h

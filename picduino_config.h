@@ -1,10 +1,3 @@
-/* 
- * File:   config.h
- * Author: Ken
- *
- * Created on March 29, 2014, 4:32 PM
- */
-
 #ifndef __PICDUINO_CONFIG_H
 #define	__PICDUINO_CONFIG_H
 

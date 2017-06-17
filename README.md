@@ -7,3 +7,5 @@ As an initial release, the functionalities supported are limited. Notably missin
 Compiler used is XC32 and the code as is should work on C32 as well.
 
 Porting to other PIC32 chips should be easy.
+
+More details available here: https://dannyelectronics.wordpress.com/2017/06/17/pic32duino-initial-release/
